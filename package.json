@@ -1,5 +1,5 @@
 {
-  "name": "@dt/webpack-ts-template",
+  "name": "@dt/hooks",
   "version": "0.0.1",
   "description": "",
   "packageManager": "pnpm@8.15.3",
@@ -38,7 +38,7 @@
     "fs-extra": "11.2.0"
   },
   "build": {
-    "name": "",
+    "name": "Dt_Hooks",
     "entry": "src/index.ts"
   }
 }
