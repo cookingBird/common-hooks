@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-export default function <T>(_default: T) {
+export default function useQueryForm<T>(_default: T) {
   const query = ref({ ..._default });
   return {
     query,
