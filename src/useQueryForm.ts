@@ -4,7 +4,6 @@ export default function useQueryForm<T>(_default: T) {
   return {
     query,
     reset() {
-      // @ts-expect-error
       query.value = { ..._default };
     },
   };
