@@ -3,7 +3,7 @@ export default function useInnerProps<T>(propValue: MaybeRefOrGetter<T>) {
   const innerValue = ref<T>(toValue(propValue));
   watch(
     () => toValue(propValue),
-    (val) => {
+    (val: T) => {
       innerValue.value = val;
     },
   );
