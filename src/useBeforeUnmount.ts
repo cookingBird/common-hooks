@@ -3,7 +3,11 @@ export default function useBeforeUnmount() {
   const cancels: (() => void)[] = [];
   onBeforeUnmount(() => {
     while (cancels.length) {
-      cancels.shift()!();
+      try {
+        cancels.shift()!();
+      } catch (error) {
+        console.error('invoke beforeUnmount hook error', error)
+      }
     }
   });
   return cancels;
